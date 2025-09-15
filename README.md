@@ -1,6 +1,6 @@
-# Kali Linux OSINT VM Setup Script
+# Kali Linux OSINT Setup Script
 
-This is a comprehensive and automated setup script for a new Kali Linux virtual machine, designed to streamline the installation of a wide range of Open-Source Intelligence (OSINT) tools. It combines various installation methods—including `apt`, `pipx`, `go`, `snap`, and `git`—into a single, robust script.
+This is a comprehensive and automated setup script for a new Kali Linux virtual machine, designed to streamline the installation of a wide range of Open-Source Intelligence (OSINT) tools. It now separates **root-level** and **user-level** installations for improved security and better permission management.
 
 <div align="center"> <pre> 
                               ______________                               
@@ -25,6 +25,8 @@ EGV                        `:.`---.__         `-._
 ## Features
 
 -   **Automated Installation:** Installs a large collection of OSINT tools without manual intervention.
+    
+-   **Secure Execution:** Automatically switches from `root` to the standard user for installations that don't require elevated permissions.
     
 -   **Dependency Management:** Manages Python dependencies using isolated virtual environments for many tools to prevent conflicts.
     
@@ -63,7 +65,7 @@ EGV                        `:.`---.__         `-._
     
 3.  Run the Script:
     
-    Execute the script with sudo:
+    Execute the script with sudo. It will handle the rest automatically.
     
     ```
     sudo ./kali_osint_setup_enhanced.sh
@@ -77,24 +79,28 @@ EGV                        `:.`---.__         `-._
 
 The script performs the following actions in a structured order:
 
-1.  **Initial Setup:** Updates `apt` package lists and verifies root privileges.
+1.  **Root-level Setup:**
     
-2.  **System-wide Packages:** Installs a list of common tools and dependencies using `apt`. It also purges some pre-installed tools to use more up-to-date versions later.
+    -   Updates `apt` package lists.
+        
+    -   Installs all necessary system-wide packages.
+        
+    -   Installs and configures the MongoDB database.
+        
+    -   Sets up and enables system services like UFW, SSH, and PostgreSQL.
+        
+    -   Configures the system's DNS settings.
+        
+2.  **User-level Setup (as your user account):**
     
-3.  **MongoDB Installation:** Adds the official MongoDB repository and installs the database server, enabling it to start automatically on boot.
-    
-4.  **Service Configuration:** Starts and enables key services like UFW, Snapd, PostgreSQL, and SSH. It also initializes the Metasploit database and configures DNS settings.
-    
-5.  **Go Toolchain:** Installs a collection of Go-based tools and moves them to the appropriate binary path.
-    
-6.  **Language-specific Tools:** Installs tools using `npm`, `gem`, `snap`, and `cargo`.
-    
-7.  **Python and Git Tools:** Clones various GitHub repositories into a `~/programs` directory and installs their Python dependencies in isolated virtual environments.
-    
-8.  **Repository Cloning:** Clones several useful resources, cheatsheets, and tool collections into designated directories.
-    
-9.  **Ronin Installation:** Downloads and runs the installation script for the Ronin toolkit.
-    
+    -   Installs a collection of Go-based tools.
+        
+    -   Installs language-specific tools using `npm`, `gem`, `snap`, and `cargo`.
+        
+    -   Clones various GitHub repositories into a `~/programs` directory and manages Python dependencies using isolated virtual environments.
+        
+    -   Clones several useful resources, cheatsheets, and tool collections into designated directories.
+        
 
 ## Post-Installation
 
