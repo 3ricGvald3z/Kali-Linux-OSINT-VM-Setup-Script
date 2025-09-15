@@ -3,19 +3,20 @@
 This is a comprehensive and automated setup script for a new Kali Linux virtual machine, designed to streamline the installation of a wide range of Open-Source Intelligence (OSINT) tools. It combines various installation methods—including `apt`, `pipx`, `go`, `snap`, and `git`—into a single, robust script.
 
 <div align="center"> <pre> 
-             __.-/|
-             \`o_O'
-              =( )=  +-----+
-                U|   | Kali |
-      /\  /\   / |   +-----+
-     ) /^\) ^\/ _)\     |
-     )   /^\/   _) \    |
-     )   _ /  / _)  \___|_
- /\  )/\/ ||  | )_)\___,|))
-<  >      |(,,) )__)    |
- ||      /    \)___)\
- | \____(      )___) )____
-  \______(_______;;;)__;;;)
+                              ______________                               
+                        ,===:'.,            `-._                           
+EGV                        `:.`---.__         `-._                       
+ Kali Linux OSINT              `:.     `--.         `.                     
+                                 \.        `.         `.                   
+                         (,,(,    \.         `.   ____,-`.,                
+                      (,'     `/   \.   ,--.___`.'                         
+                  ,  ,'  ,--.  `,   \.;'         `                         
+                   `{D, {    \  :    \;                                    
+                     V,,'    /  /    //                                    
+                     j;;    /  ,' ,-//.    ,---.      ,                    
+                     \;'   /  ,' /  _  \  /  _  \   ,'/                    
+                           \   `'  / \  `'  / \  `.' /                     
+                            `.___,'   `.__,'   `.__,'  VM
 
 </pre>
 
