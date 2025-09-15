@@ -20,6 +20,8 @@ EGV                        `:.`---.__         `-._
 
 </pre>
 
+</div>
+
 ## Features
 
 -   **Automated Installation:** Installs a large collection of OSINT tools without manual intervention.
