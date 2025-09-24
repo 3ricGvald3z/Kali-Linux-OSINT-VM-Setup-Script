@@ -2,26 +2,6 @@
 
 This is a comprehensive and automated setup script for a new Kali Linux virtual machine, designed to streamline the installation of a wide range of Open-Source Intelligence (OSINT) tools. It now separates **root-level** and **user-level** installations for improved security and better permission management.
 
-<div align="center"> <pre> 
-                              ______________                               
-                        ,===:'.,            `-._                           
-EGV                        `:.`---.__         `-._                       
- Kali Linux OSINT              `:.     `--.         `.                     
-                                 \.        `.         `.                   
-                         (,,(,    \.         `.   ____,-`.,                
-                      (,'     `/   \.   ,--.___`.'                         
-                  ,  ,'  ,--.  `,   \.;'         `                         
-                   `{D, {    \  :    \;                                    
-                     V,,'    /  /    //                                    
-                     j;;    /  ,' ,-//.    ,---.      ,                    
-                     \;'   /  ,' /  _  \  /  _  \   ,'/                    
-                           \   `'  / \  `'  / \  `.' /                     
-                            `.___,'   `.__,'   `.__,'  VM
-
-</pre>
-
-</div>
-
 ## Features
 
 -   **Automated Installation:** Installs a large collection of OSINT tools without manual intervention.
